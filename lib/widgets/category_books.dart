@@ -24,7 +24,7 @@ class CategoryBooks extends StatelessWidget {
           BookData data = AppDatabase.categoryBook[index];
 
           return InkWell(
-            onTap: () => onTap,
+            onTap: () => onTap(data),
             borderRadius: BorderRadius.circular(6),
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),

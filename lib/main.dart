@@ -1,3 +1,4 @@
+import 'package:bookano/logic/provider/book_details_provider.dart';
 import 'package:bookano/logic/provider/bottom_nav_provider.dart';
 import 'package:bookano/logic/provider/category_titles_provider.dart';
 import 'package:bookano/root_screen.dart';
@@ -15,6 +16,9 @@ void main() {
         ),
         ChangeNotifierProvider<CategoryTitlesProvider>(
           create: (context) => CategoryTitlesProvider(),
+        ),
+        ChangeNotifierProvider<BookDetailsProvider>(
+          create: (context) => BookDetailsProvider(),
         ),
       ],
       child: const MyApp(),

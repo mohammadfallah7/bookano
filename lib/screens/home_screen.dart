@@ -1,5 +1,7 @@
+import 'package:bookano/screens/book_screen.dart';
 import 'package:bookano/widgets/my_library.dart';
 import 'package:bookano/widgets/my_wishlist.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -28,7 +30,13 @@ class HomeScreen extends StatelessWidget {
               useTheme: useTheme,
               title: 'My Library',
               onDiscoverMoreTap: () {},
-              onBookTap: (data) {},
+              onBookTap: (data) {
+                Navigator.of(context).push(
+                  CupertinoPageRoute(
+                    builder: (context) => BookScreen(data: data),
+                  ),
+                );
+              },
             ),
           ),
           SliverToBoxAdapter(
@@ -67,7 +75,13 @@ class HomeScreen extends StatelessWidget {
           ),
           MyWishlist(
             useTheme: useTheme,
-            onTap: (data) {},
+            onTap: (data) {
+              Navigator.of(context).push(
+                CupertinoPageRoute(
+                  builder: (context) => BookScreen(data: data),
+                ),
+              );
+            },
           ),
         ],
       ),

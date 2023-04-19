@@ -27,7 +27,7 @@ class MyWishlist extends StatelessWidget {
             return Material(
               color: Colors.transparent,
               child: InkWell(
-                onTap: () => onTap,
+                onTap: () => onTap(data),
                 borderRadius: BorderRadius.circular(6),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(

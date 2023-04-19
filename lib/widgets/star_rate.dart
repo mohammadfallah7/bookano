@@ -10,11 +10,12 @@ class StarRate extends StatelessWidget {
     this.top = 0,
     this.right = 0,
     this.bottom = 0,
+    this.starSize = 10,
   });
 
   final ThemeData useTheme;
   final int star;
-  final double left, top, right, bottom;
+  final double left, top, right, bottom, starSize;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class StarRate extends StatelessWidget {
               star,
               (index) => Icon(
                 CupertinoIcons.star_fill,
-                size: 10,
+                size: starSize,
                 color: useTheme.colorScheme.primary,
               ),
             ),
@@ -37,7 +38,7 @@ class StarRate extends StatelessWidget {
               5 - star,
               (index) => Icon(
                 CupertinoIcons.star_fill,
-                size: 10,
+                size: starSize,
                 color: useTheme.colorScheme.surface,
               ),
             ),

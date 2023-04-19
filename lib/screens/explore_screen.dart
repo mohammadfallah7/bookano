@@ -1,6 +1,8 @@
+import 'package:bookano/screens/book_screen.dart';
 import 'package:bookano/widgets/categories.dart';
 import 'package:bookano/widgets/category_books.dart';
 import 'package:bookano/widgets/my_page_view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ExploreScreen extends StatelessWidget {
@@ -26,7 +28,13 @@ class ExploreScreen extends StatelessWidget {
           ),
           CategoryBooks(
             useTheme: useTheme,
-            onTap: (data) {},
+            onTap: (data) {
+              Navigator.of(context).push(
+                CupertinoPageRoute(
+                  builder: (context) => BookScreen(data: data),
+                ),
+              );
+            },
           ),
         ],
       ),
